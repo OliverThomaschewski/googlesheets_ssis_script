@@ -17,7 +17,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 SAMPLE_SPREADSHEET_ID = '1lV8mcnKtwcBoXs97H6SI-O7enwIZESGRlIXz8fxKED8'  # Sheet_Id found in Sheet URL
 SAMPLE_RANGE_NAME = 'ANFRAGEN!A:B'          # "Anfragen" -> Name of relevant Tab, "A:B" Columns A to B
 
-# Other things
+# Filepaths
 
 csv_path = '../anfragen.csv'
 credentials_path = 'Python_Stuff\credentials.json'
@@ -58,13 +58,16 @@ def main():
             print('No data found.')
             return
         
-        #for value in values:
-          #  print(value)
 
         df_results = pd.DataFrame(values)
+        
+        # Uncomment to check results
+        """
+        for value in values:
+           print(value)
 
-        # print(df_results)
-
+        print(df_results)
+        """
         df_results.to_csv(csv_path, index=False, header=False)
 
      
