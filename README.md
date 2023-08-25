@@ -5,6 +5,7 @@ This Script can be used to access data from google sheets and save the results i
 ## Dependencies
 
 pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib 
+
 pip install pandas
 
 ## Prerequisites
